@@ -1,0 +1,402 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark theme */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+#hero {
+    padding: 80px 20px;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Hero Image */
+.hero-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Titles (Global Styling) */
+h1, h2, h3 {
+    transition: transform 0.3s ease, letter-spacing 0.3s ease, color 0.3s ease;
+}
+
+/* Paragraphs */
+p {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Links */
+a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ffd700;
+    color: #333;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Cards in Projects Section */
+.project-card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Hover Effects for All Text Elements --- */
+
+/* Titles */
+h1:hover, h2:hover, h3:hover {
+    transform: scale(1.1);
+    letter-spacing: 2px;
+    color: #ffd700; /* Gold */
+}
+
+/* Paragraphs */
+p:hover {
+    transform: translateY(-3px);
+    color: #ffcc00;
+}
+
+/* Navigation Links */
+nav a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
+
+/* Project Cards */
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* Buttons */
+.btn:hover {
+    background: #ffcc00;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Header Section - Smaller and Centered */
+header {
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 12px 20px; /* Reduced height */
+}
+
+/* Centering Title */
+header h1 {
+    font-size: 2rem; /* Slightly smaller */
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* Navigation - Inline and Centered */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between links */
+}
+
+/* Navigation Links */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+nav a:hover {
+    color: #ffd700; /* Gold */
+    transform: scale(1.1);
+}
+
+.projects {
+    text-align: center;
+    padding: 50px 20px;
+    background: #121212; /* Dark background for contrast */
+    color: white;
+    min-height: 100vh;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Updated Card Styles */
+.project-card {
+    background: #222; /* Darker shade for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+#add-project-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #ffcc00;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+#add-project-btn:hover {
+    background: #ffd700;
+    transform: scale(1.1);
+}
+
+#project-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#project-form input, #project-form textarea {
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* About Me Section */
+#about {
+    background: #1a1a2e; /* Dark Blue Shade */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Contact Section */
+#contact {
+    background: #16213e; /* Slightly Darker Blue */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+/* Hero Section - Reduced Height */
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 50px 20px;
+}
+
+/* Hero Content: Name & Photo in One Line */
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* More space between photo and name */
+}
+
+/* Hero Photo Styling */
+.hero-photo {
+    width: 150px; /* Increased size */
+    height: 150px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    border: 4px solid white;
+    transform: translateX(-20px); /* Moves the image slightly left */
+}
+
+/* Hero Name */
+.hero-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+
+/* Button Styling */
+.btn {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #ffd700;
+    transform: scale(1.1);
+}
+
+/* Hero Description (About Me) */
+.hero-description {
+    max-width: 800px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+/* Contact Page Styles */
+.contact-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #16213e, #1a1a2e);
+    color: white;
+}
+
+/* Contact Container */
+.contact-container {
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Form Fields */
+#contact-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Submit Button */
+#contact-form button {
+    background: #ffcc00;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#contact-form button:hover {
+    background: #ffd700;
+    transform: scale(1.1);
+}
+/* Contact Section Styling */
+.contact-section {
+    background: #16213e; /* Dark Blue Shade */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Style the Icons */
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}

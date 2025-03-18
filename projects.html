@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Projects</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="projects">
+        <h2>Projects Showcase</h2>
+        <div class="project-grid" id="project-list">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>Description of the first project.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Description of the second project.</p>
+            </div>
+        </div>
+
+        <!-- Add Project Button -->
+        <button id="add-project-btn" class="btn">Add New Project</button>
+
+        <!-- Project Form (Initially Hidden) -->
+        <div id="project-form" class="hidden">
+            <input type="text" id="project-title" placeholder="Project Title">
+            <textarea id="project-description" placeholder="Project Description"></textarea>
+            <button id="save-project-btn" class="btn">Save Project</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
